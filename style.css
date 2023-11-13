@@ -1,0 +1,890 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Spartan', sans-serif ;
+
+
+}
+*/
+body{
+    width: 100%;
+    scrollbar-width: auto ;
+
+
+}
+
+/* Pour l'entete*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    height: 100px;
+    background-color: pink;
+    box-shadow: 0 5px 10px black;
+    z-index: 999;
+    position: fixed;    /*pour fixer le header*/
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    
+   
+
+}
+
+#navbar{
+    display: flex;
+    align-items: center;          /*aligner horizontalement et centrer*/
+    justify-content: center;
+   
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px ;
+    position: relative;
+  
+
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color:white;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after
+{
+    content: "";
+    width: 20%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.sous-menu 
+{   display: none;
+    box-shadow: 0px 1px 2px rgb(255, 254, 254);
+    background-color:  white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+#navbar li a:hover .sous-menu {
+    display: block;
+}
+
+
+
+.sous_menu li {
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sous_menu a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous_menu a:hover{
+    border-bottom: none;
+}
+
+
+/* Pour la page d'accueil*/
+/*#hero {
+    background-image: url("IMAGE_Site/femme-fo.png");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+
+}
+*/
+/*Accueil*/
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: pink;
+    height:     750px;
+}
+.col{
+    line-height: 1.5;
+    flex-basis: 30%;
+    min-width: 300px;
+}
+
+
+.col img{
+  
+    width: 133%;             
+   padding-bottom: 100px;
+    padding-right: 0;
+    font-family:"Vibur";
+
+
+}
+
+
+
+.rowShop {
+   
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding-top: 200px;
+    overflow: hidden;
+    background-image: url('IMAGE_Site/Online Shopping Quote.jpg') ;
+   
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     text-align: center;
+     justify-content: center;
+     animation: change 15s infinite ease-in-out;
+     
+   
+
+
+
+}
+@keyframes change {
+    0%{
+        background-image:  url('IMAGE_Site/1416.jpgvente-shopping-3d.jpg');
+    }
+    10%{
+        background-image:  url('IMAGE_Site/vue-face-du-concept.jpg');
+
+    }
+    20%{
+        background-image:  url('IMAGE_Site/belle-femme-afro-americaine .jpg');
+    }
+    30%{
+        background-image:  url('IMAGE_Site/assortiment-elements-du-vendredi-noir.jpg');
+    }
+    40%{
+        background-image:  url('IMAGE_Site/portrait-jeune-femme-sautant.jpg');
+    }
+    50%{
+        background-image:  url('IMAGE_Site/jeune-femme .jpg');
+    }
+    60%{
+        background-image:  url('IMAGE_Site/jeune-femme-brune-fete-confettis.jpg');
+    }
+    70%{
+        background-image:  url('IMAGE_Site/1416.jpg');
+    }
+    
+    80%{
+        background-image:  url('IMAGE_Site/jeune-femme-brune-fete-confettis.jpg');
+    }
+    90%{
+        background-image:  url('IMAGE_Site/jeune-femme-brune-fete-confettis.jpg');
+    }
+    100%{
+        background-image:  url('IMAGE_Site/jeune-femme-brune-fete-confettis.jpg');
+    }
+}
+/*
+
+
+  @keyframes scrollBackground {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+ */
+.rowShop h1{
+    color: rgb(224, 76, 101);
+}
+
+.col button a{
+    text-decoration: none;
+    color: rgb(19, 16, 17);
+}
+
+.col button{
+    line-height: 3;
+    height: 70px;
+    background: rgb(192, 107, 149);
+    border-radius:200px ;
+   
+    padding: 2px 30px;
+    margin-top: 45px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-family: "Script de stylo Nanum";
+    font-weight: 200;
+    font-size: 20px;
+    transition: background 0.2s;
+
+}
+.col button:hover{
+    background: pink;
+
+}
+
+.col h1{
+    color: rgb(235, 52, 134);
+}
+/*style section category*/
+#category{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+}
+.nouv h2{
+    padding-top: 20px;
+    font-family: "Delius Unicase";
+    font-size: 40px;
+
+}
+.col1{
+    width: 200;
+    height: auto;
+    flex-basis: 35%;
+    min-width: 250px;
+    margin: auto;
+    justify-content: center;
+    display: block;
+
+}
+.col1 img{
+
+    justify-content: center;
+    display: block;
+
+}
+
+#product{
+    text-align: center;
+
+}
+#product .row1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    justify-content: space-between ;
+    padding-top: 20px;
+    padding-left: 50px;
+ 
+ 
+}
+
+/*stylisation de chaque image*/
+#product .col1 {
+    width: 3%;
+    min-width: 150spx;
+    padding: 10px 12px;
+    border: 1px solid pink;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgb(237, 253, 253);
+    margin: 28px 0;
+    transition: 0.3s;
+    position: relative;
+}
+#product .col1:hover{
+    box-shadow: 20px 20px 30px rgb(255, 249, 249);
+    transform: translate(-5px);
+}
+
+#product .col1 img{
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+   
+}
+#product .col1 .desc{
+    text-align: start;
+    padding: 10px 0;
+}
+#product .col1 .desc span{
+    color: rgb(180, 111, 123);
+    font-size: 16px;
+}
+#product .col1 .desc h5{
+    padding-top: 7px; 
+    color: rgb(41, 40, 40);
+    font-size: 14px;
+}
+#product .col1 .desc i{
+   font-size: 12px;
+   color: rgb(243, 181, 25);  
+}
+#product .col1 .desc h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: brown;
+}
+
+#product .col1 .cart{
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: pink;
+    font-weight: 500000;
+    color: rgb(29, 57, 58);
+    font-size: 20px;
+    border: 1px solid pink;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    
+}
+/*Partie promo*/
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("IMAGE_Site/d_black_friday.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner h2{
+    color:rgb(243, 161, 9);
+    font-size: 50px;
+    padding: 10px 0;
+}
+
+#banner button {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: antiquewhite;
+    border-radius: 200px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s
+
+}
+#banner button:hover{
+    background: #b0f1e9;
+    color:rgb(168, 88, 88) ;
+}
+
+
+/*Nouveauté*/
+#banner1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    justify-content: space-between ;
+    padding-top: 2px;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 50px 75px;
+ 
+}
+#banner1 .new{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("IMAGE_Site/femmeShopping.jpg");
+    min-width: 500px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+
+}
+
+#banner1 .box{
+   
+    background-image: url("IMAGE_Site/téléchargement (14).jpeg");
+    
+}
+
+
+#banner1 h4{
+    color: blueviolet;
+    font-size: 35px;
+    font-weight: 300;
+
+}
+#banner1 h2{
+    color: rgb(226, 43, 83);
+    font-size: 28px;
+    font-weight: 800;
+
+}
+#banner1 span{
+    color: rgb(37, 32, 32);
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#banner1 button {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 12px 20px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.2s
+
+}
+#banner1 .new:hover button{ 
+    background: rgb(92, 79, 92);
+    border: 1px solid rgb(92, 79, 92);
+
+}
+/*Partie newlettres*/
+#newlettres {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("IMAGE_Site/fond-bleu.jpg");
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: rgb(11, 11, 39);
+
+}
+
+#newlettres .newtext{
+    padding-left: 50px;
+}
+#newlettres button {
+    
+    padding-right: 20px;
+    margin-right: 50px;
+    height: 2.125rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: #088178 ;
+    color: #fff;
+    border-top-left-radius: 0 ;
+    border-bottom-left-radius: 0;
+  
+
+}
+#newlettres input {
+   
+    padding-right: 10px ;
+    height: 2.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 80%;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none;
+    border-top-right-radius: 0 ;
+    border-bottom-right-radius: 0;
+}
+
+
+#newlettres h4{
+    font-size: 22px;
+    font-weight: 700px;
+    color: #fff;
+}
+#newlettres p{
+    font-size: 14px;
+    font-weight: 600px;
+    color: #818ea0;
+}
+#newlettres p span{
+    color: #b94646;
+}
+#newlettres .from{
+    display: flex;
+    width: 50%;
+
+}
+
+
+
+
+.colum {
+    line-height: 25px;
+    padding-left: 50px;
+   
+}
+
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    justify-content: space-between;
+    margin-top: 30px;
+    background-color: rgb(42, 42, 75);
+}
+
+
+footer .colum {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+footer p{
+    font-size:  15px;
+    margin: 0 0 8px 0;
+     
+}
+footer a{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+     
+}
+
+/*styliser les icon de follow*/
+
+footer .follow{
+    margin-top: 5px;
+}
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .colum1 .row3 img{
+    border: 1px solid pink;
+    border-radius: 6px;
+
+}
+footer .colum1 img{
+    margin: 1px 0 14px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: #b94646;
+}
+
+footer .copyright{
+    width: 400%;
+    text-align: center;
+
+}
+
+
+
+/*shop page*/
+.row {
+    margin-top: 50px;
+}
+
+.row .colImg {
+    
+    width: 600px;
+    min-width: 300px;
+   
+   
+}
+.row .colImage{
+    padding-left: 100px;
+}
+/*About page*/
+
+.about-header {
+    background-image: url("IMAGE_Site/image of Cashless online .jpg");
+    width: 100%;
+    height: 500px;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+}
+.about-header h2{
+    padding-top: 100px;
+    align-items: center;
+}
+#about-head img{
+    width: 50%;
+    height: auto;
+    padding-left: 50px ;
+    padding-top: 100px;
+}
+
+#about-head{
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+
+}
+#about-head h2{
+    padding-top: 45px;
+}
+#about-head div {
+    padding-left: 30px;
+    line-height: 20px
+}
+#contact-details .details h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+    color: rgb(156, 80, 92);
+    font-size: 30px;
+    
+}
+
+#contact-details .details li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+    line-height: 20px;
+    color: rgb(167, 71, 87);
+    font-size: 30px;
+    
+}
+
+/*commentaire*/
+
+#from-details form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+#from-details form span {
+    font-size: 12px;
+}
+
+#from-details form h2 {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+#from-details form input, 
+#from-details form textarea { 
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #aaa7a7;
+}
+
+#from-details form button{
+    
+        padding-right: 20px;
+        margin-right: 50px;
+        height: 2.125rem;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        background-color: #088178 ;
+        color: #fff;
+        border-top-left-radius: 0 ;
+        border-bottom-left-radius: 0;
+        padding-left: 20px;
+      
+
+}
+#cart table{
+   
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+#cart table img {
+    width: 100px;
+    padding-top: 30px;
+}
+#cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
+#cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 10px 5px 10px;
+}
+
+#cart table thead {
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+#cart table tbody tr td {
+    padding-top: 15px;
+}
+
+#cart table tbody  td{
+    font-size: 13px;
+}
+
+
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#coupon {
+    width: 50%;
+    margin-bottom: 30px;
+
+}
+#coupon h3,
+#subtotal h3{
+    padding-bottom: 15px;
+}
+#coupon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+
+}
+#coupon button,
+#subtotal button {
+    padding-right: 20px;
+    margin-right: 50px;
+    height: 2.125rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: #088178 ;
+    color: #fff;
+    border-top-left-radius: 0 ;
+    border-bottom-left-radius: 0;
+    padding-left: 20px;
+}
+
+#subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color:pink;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container1 {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color:rgb(255, 193, 203);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color:#814646;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: pink;
+}
+
+
+
+/*Partie compte*/
+
+
+
+/*
+#pagination {
+    text-align: center;
+}
+#pagination a {
+    margin-top: 100px;
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+#pagination a i{
+    font-size: 16px;
+    font-weight: 600;
+}*/

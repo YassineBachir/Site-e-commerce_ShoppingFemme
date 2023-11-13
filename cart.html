@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <section id="header">
+      
+            <img src="IMAGE_Site/womanLogo .png" alt="Logo"  width="250" >
+       
+                <div>
+                    <ul id="navbar">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a  href="shop.html">Shop</a>
+                            <ul class="sous-menu">
+                                <li><a href="#">Cosmétique</a></li>
+                                <li><a href="#">Habillement</a></li>
+                                <li><a href="#">Vaisselles</a></li>
+                                
+                            </ul>
+                        </li>
+
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a  href="contact.html">Contact</a></li>
+                        <li><a href="compte.html">Compte</a></li>
+                        
+                        <li><a class="active" href="#"><i class='bx bx-cart cart'></i></a></li>
+                        
+                    </ul>
+                </div>
+                
+    </secttion>  
+</header>
+<section id="about" class="about-header">
+   <h2> Bienvunue dans l'univers des femmes</h2> 
+   <p>Nous somme une boutique en ligne spécialisée dans les produits pour femme</p>
+
+</section>
+
+<section id="cart" class="sectionP1">
+    <table width="100%">
+      <thead>
+        <tr>
+            <td>Supprimer</td>
+            <td>Image</td>
+            <td>Produit</td>
+            <td>Prix</td>
+            <td>Quantité</td>
+            <td>Total</td>
+        </tr>
+      </thead> 
+      <tbody>
+        <tr>
+            <td><a href="#"><i class='bx bx-trash'></i></a></td>
+            <td><img src="IMAGE_Site/Heel pearls white.jpeg" alt=""></td>
+            <td>Sandales à talons</td>
+            <td>12000Fcfa</td>
+            <td><input type="number" value="1" min="1" class="quantity-input"></td>
+            <button onclick="decreaseQuantity(this)">-</button>
+                <button onclick="increaseQuantity(this)">+</button>
+            <td>12000Fcfa</td>
+        </tr>
+
+        <tr>
+            <td><a href="#"><i class='bx bx-trash'></i></a></td>
+            <td><img src="IMAGE_Site/fashionHand.jpg" alt=""></td>
+            <td>Sandales à talons nude</td>
+            <td>15000Fcfa</td>
+            <td><input type="number" value="1" min="1" class="quantity-input"></td>
+            <button onclick="decreaseQuantity(this)">-</button>
+                <button onclick="increaseQuantity(this)">+</button>
+            <td>15000Fcfa</td>
+        </tr>
+
+        <tr>
+            <td><a href="#"><i class='bx bx-trash'></i></a></td>
+            <td><img src="IMAGE_Site/boxVoiles.jpeg" alt=""></td>
+            <td>Box de 12 voiles mouslines</td>
+            <td>10000Fcfa</td>
+            <td><input type="number" value="1" min="1" class="quantity-input"></td>
+            <button onclick="decreaseQuantity(this)">-</button>
+                <button onclick="increaseQuantity(this)">+</button>
+            <td>10000Fcfa</td>
+        </tr>
+
+        <tr>
+            <td><a href="#"><i class='bx bx-trash'></i></a></td>
+            <td><img src="IMAGE_Site/cerav.jpeg" alt=""></td>
+            <td>Gel anti-imperfections Cerave</td>
+            <td>16000Fcfa</td>
+            <td><input type="number" value="1" min="1" class="quantity-input"></td>
+            <button onclick="decreaseQuantity(this)">-</button>
+                <button onclick="increaseQuantity(this)">+</button>
+            <td>30000Fcfa</td>
+        </tr>
+      </tbody> 
+    </table>
+
+</section>
+
+<section id="cart-add" class="sectionP1">
+    <div id="coupon">
+        <h3>Appliquer un coupon</h3>
+        <div>
+            <input type="text" placeholder="Entrer votre coupon" >
+
+            <button class="normal" id="1">Appliquer</button>
+        </div>
+    </div>
+
+    <div id="subtotal">
+        <h3>Facture</h3>
+        <table>
+            <tr>
+                <td>Total</td>
+                <td>12000Fcfa</td>
+            </tr>
+
+            <tr>
+                <td>Livraison</td>
+                <td>1000Fcfa</td>
+            </tr>
+
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>13000Fcfa</strong></td>
+            </tr>
+
+        </table> 
+        <button class="normal">Procèder au payement</button>
+    </div>
+</section>
+
+<!--pied de page-->
+<footer class="sectionP1">
+    <div class="colum">
+        
+       <h4>Contact</h4> 
+       <p><strong>Téléphone:</strong>  +338561345/771230909</p>
+       <p><strong>Ouvert:</strong>  24H/24 , 7jours/7</p>
+       <div class="follow">
+        <h4>Nous suivre</h4>
+        <div class="icon"></div>
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-instagram-alt'></i>
+        <i class='bx bxl-tiktok'></i>
+
+       </div>
+
+       
+       
+
+    </div>
+    <diV class="colum">
+       <h4>À propos</h4> 
+       <a href="#">À propos de nous</a>
+       <a href="#">Informations</a>
+       <a href="#">Confidentialité</a>
+       <a href="#">Nous contacter</a>
+
+    </diV>
+
+    <diV class="colum">
+        <h4>Mon Compte</h4> 
+        <a href="#">Voir carte</a>
+        <a href="#">Suivre ma commande</a>
+        <a href="#">Aide</a>
+ 
+     </diV>
+
+    <div class="colum1">
+        <h4>Installer l'application</h4>
+        <p>App Store ou Google Play</p>
+        <div class="row3">
+            <img src="IMAGE_Site/app.jpg" alt="" >
+            <img src="IMAGE_Site/play.jpg" alt="" >
+            
+            
+        </div>
+        <p>Payement</p>
+        <img src="IMAGE_Site/OM.jpeg" alt="" width="40px">
+        <img src="IMAGE_Site/Wave.jpeg" alt="" width="40px">
+        <img src="IMAGE_Site/Visa.jpeg"  alt="" width="40px">
+
+    </div>
+    <div class="copyright">
+        <p>© 2023, QueenShop</p>
+
+    </div>
+</footer>
+    <script src="cart.js"></script>
+
+
+</body>
+</html> 
